@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>web API "kanjinumber.com"</title>
+    <script>
+        var URL = "https://5nbkfno7nd.execute-api.ap-northeast-1.amazonaws.com/v1/"
+    </script>
+</head>
+
+<body>
+    <h1>DreamArts コーディングテスト</h1>
+
+    <div>
+        <p>アラビア数字→漢字</p>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="text" size="40" name="number" id="number" />
+            <input type="button" value="send" onclick="visualize_number()" />
+        </form>
+    </div>
+    <div>
+        <p>漢字→アラビア数字</p>
+        <input type="text" size="40" name="number" id="kanji" />
+        <input type="button" value="send" onclick="visualize_kanji()"/>
+    </div>
+
+    <div>
+        <p>
+            出力: <span id="result">{{result_text}}</span>
+        </p>
+        <p>
+            Json: <p id="result_json"></p>
+        </p>
+    </div>
+
+    <script src="/static/javascript/number2kanji.js" ></script>
+    <script src="/static/javascript/kanji2number.js"></script>
+
+</body>
+
+</html>

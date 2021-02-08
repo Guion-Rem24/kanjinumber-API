@@ -11,8 +11,8 @@ WORKDIR /opt/webapp
 # Expose is NOT supported by Heroku
 # EXPOSE 5000
 
-RUN adduser -D nsuhara
-USER nsuhara
+RUN adduser -D mine
+USER mine
 
 # $PORT is set by Heroku
 CMD gunicorn --bind 0.0.0.0:$PORT wsgi
